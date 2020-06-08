@@ -26,6 +26,7 @@ func Secret() *schema.Resource {
 			"identifier": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
+				ForceNew: true,
 			},
 			"domain": &schema.Schema{
 				Type:     schema.TypeString,

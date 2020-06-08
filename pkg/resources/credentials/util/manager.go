@@ -1,8 +1,9 @@
 package util
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
 	"reflect"
+
+	"github.com/hashicorp/terraform/helper/schema"
 )
 
 type CredsProvider interface {
@@ -62,7 +63,6 @@ func CreateCredsManager(provider CredsProvider) CredsManager {
 		if err != nil {
 			return err
 		}
-
 		return cm.Update(domain, jobPath, id(cred), cred)
 	}
 
